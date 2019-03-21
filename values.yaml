@@ -2,29 +2,29 @@
 ## Please, note that this will override the image parameters, including dependencies, configured to use the global value
 ## Current available global Docker image parameters: imageRegistry and imagePullSecrets
 ##
-# global:
-#   imageRegistry: myRegistryName
-#   imagePullSecrets:
-#     - myRegistryKeySecretName
+global:
+   imageRegistry: myRegistryName
+   imagePullSecrets:
+     - myRegistryKeySecretName
 
 ## Bitnami Magento image version
 ## ref: https://hub.docker.com/r/bitnami/magento/tags/
 ##
 image:
-  registry: docker.io
-  repository: bitnami/magento
+ 
+  repository: yobitelcom/magento
   tag: 2.3.0
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
   ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images
   ##
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   ## Optionally specify an array of imagePullSecrets.
   ## Secrets must be manually created in the namespace.
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
   ##
-  # pullSecrets:
-  #   - myRegistryKeySecretName
+   pullSecrets:
+     - myRegistryKeySecretName
 
 ## Magento host to create application URLs
 ## ref: https://github.com/bitnami/bitnami-docker-magento#configuration
