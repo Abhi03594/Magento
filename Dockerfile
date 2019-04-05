@@ -83,5 +83,5 @@ RUN ["chmod", "+x", "/usr/local/bin/magento-installer"]
 RUN ["chmod", "+x", "/usr/local/bin/magento-command"]
 RUN ["chmod", "+x", "/usr/local/bin/magerun2"]
 RUN ["chmod", "+x", "/usr/local/bin/run-cron"]
-
+EXPOSE 6060
 CMD ["bash"]
